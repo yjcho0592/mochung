@@ -17,7 +17,7 @@ export default function AudioPlayer() {
   return (
     <div className="audio-player">
       {/* audio src에 음악 파일 경로를 넣으세요 (예: /audio/bgm.mp3) */}
-      <audio ref={audioRef} loop src="/audio/bgm.mp3" />
+      <audio ref={audioRef} loop src={`${import.meta.env.BASE_URL}audio/bgm.mp3`} />
       <button className="audio-btn" onClick={toggle}>
         {playing ? '🔊 음악 끄기' : '🔇 음악 켜기'}
       </button>

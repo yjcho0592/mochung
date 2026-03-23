@@ -2,13 +2,15 @@ import { useState } from 'react'
 import './ImageGallery.css'
 
 // public/images/ 폴더에 이미지 파일을 넣고 아래 목록에 추가하세요
+const base = import.meta.env.BASE_URL
+
 const IMAGES = [
-  '/images/gallery1.jpg',
-  '/images/gallery2.jpg',
-  '/images/gallery3.jpg',
-  '/images/gallery4.jpg',
-  '/images/gallery5.jpg',
-  '/images/gallery6.jpg',
+  `${base}images/gallery1.jpg`,
+  `${base}images/gallery2.jpg`,
+  `${base}images/gallery3.jpg`,
+  `${base}images/gallery4.jpg`,
+  `${base}images/gallery5.jpg`,
+  `${base}images/gallery6.jpg`,
 ]
 
 export default function ImageGallery() {
