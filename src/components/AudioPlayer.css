@@ -1,0 +1,18 @@
+.audio-player {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  padding: 10px;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+}
+
+.audio-btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+.name-section {
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  color: #888;
+  margin-top: 6px;
+  font-size: 1rem;
+}
