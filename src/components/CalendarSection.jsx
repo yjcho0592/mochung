@@ -2,25 +2,32 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
 import './CalendarSection.css'
 
-// 표시할 일정 날짜 목록 (YYYY-MM-DD 형식으로 추가)
-const EVENTS = [
-  '2026-03-25',
-  '2026-04-01',
-]
+const HIGHLIGHT = '2026-10-17'
 
 export default function CalendarSection() {
-  const tileClassName = ({ date }) => {
-    const str = date.toISOString().split('T')[0]
-    return EVENTS.includes(str) ? 'event-day' : null
+  const tileClassName = ({ date, view }) => {
+    if (view !== 'month') return null
+    const y = date.getFullYear()
+    const m = String(date.getMonth() + 1).padStart(2, '0')
+    const d = String(date.getDate()).padStart(2, '0')
+    return `${y}-${m}-${d}` === HIGHLIGHT ? 'highlight-day' : null
   }
 
   return (
     <div className="calendar-section">
       <h2 className="section-title">일정</h2>
       <Calendar
-        locale="ko-KR"
+        value={new Date(2026, 9, 17)}
+        activeStartDate={new Date(2026, 9, 1)}
         tileClassName={tileClassName}
         calendarType="gregory"
+        locale="ko-KR"
+        prev2Label={null}
+        next2Label={null}
+        prevLabel={null}
+        nextLabel={null}
+        navigationDisabled
+        onClickDay={() => {}}
       />
     </div>
   )

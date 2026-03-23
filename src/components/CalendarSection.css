@@ -14,11 +14,31 @@
   border: none !important;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
 }
 
-.event-day {
-  background: #ffe0e0;
+.react-calendar__navigation button {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.react-calendar__navigation__label {
+  visibility: visible !important;
+  font-weight: bold;
+}
+
+.react-calendar__tile {
+  pointer-events: none;
+  color: #222 !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #e91414 !important;
+}
+
+.highlight-day {
+  background: #e91414f6 !important;
+  color: #fff !important;
   border-radius: 50%;
-  color: #e00;
   font-weight: bold;
 }

@@ -4,13 +4,14 @@
 }
 
 .name {
+  color: #5bef0b;
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
 }
 
 .subtitle {
-  color: #888;
+  color: #3904d7;
   margin-top: 6px;
   font-size: 1rem;
 }
